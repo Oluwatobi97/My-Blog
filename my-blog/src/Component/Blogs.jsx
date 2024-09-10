@@ -58,7 +58,7 @@ function Blogs() {
               <FaMessage />
             </h2>
             <button className="mt-4 md:ml-11 hover:scale-110 border-[1px] border-gray-500 hover:bg-red-500 transition-all duration-100 ease-in-out rounded-lg p-2 px-3 pb-2">
-              View
+              Views
             </button>
           </div>
           <img
