@@ -29,9 +29,9 @@ function Header() {
           Contact
         </li>
       </ul>
-      <button className="bg-red-500 rounded-full py-2 px-3 flex items-center gap-2">
+      {/* <button className="bg-red-500 rounded-full py-2 px-3 flex items-center gap-2">
         Subcribe <IoLogoYoutube />
-      </button>
+      </button> */}
     </div>
   );
 }
