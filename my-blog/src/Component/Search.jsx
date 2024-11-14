@@ -10,15 +10,15 @@ function Search() {
     },
     {
       id: 2,
-      desciption: "My Photos",
+      desciption: " Photos",
     },
     {
       id: 3,
-      desciption: "My Projects",
+      desciption: " Projects",
     },
     {
       id: 4,
-      desciption: "My Best Work",
+      desciption: "Best Work",
     },
   ];
   const [activeIndex, setActiveIndex] = useState(0);
@@ -45,7 +45,7 @@ function Search() {
               index == activeIndex ? "bg-red-500 text-white" : null
             }   rounded-2xl md:rounded-full md:px-2 cursor-pointer hover:scale-110 hover:border-[1px] border-red-500 transition-all duration-100 ease-in-out`}
           >
-            <li className=" px-3 shadow-lg rounded-2xl py-1  ">
+            <li className="text-sm font-semibold px-3 shadow-lg rounded-2xl py-1  ">
               {item.desciption}
             </li>
           </ul>
