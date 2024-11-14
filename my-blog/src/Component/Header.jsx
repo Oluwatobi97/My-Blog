@@ -6,24 +6,24 @@ import { useNavigate } from "react-router-dom";
 function Header() {
   const navigate = useNavigate();
   return (
-    <div className="flex justify-between items-center">
+    <div className="flex p-3 justify-between items-center">
       <img src={Logo} className="w-[80px] md:w-[150px]" />
       <ul className="flex gap-6 md:gap-14">
         <li
-          className="py-16 hover:font-bold cursor-pointer"
+          className="py-16 hover:font-bold cursor-pointer font-semibold"
           onClick={() => navigate("/")}
         >
           Home
         </li>
         <li
-          className="py-16 hover:font-bold cursor-pointer"
+          className="py-16 hover:font-bold cursor-pointer font-semibold"
           onClick={() => navigate("/About")}
         >
           {" "}
           About
         </li>
         <li
-          className="py-16 hover:font-bold cursor-pointer"
+          className="py-16 hover:font-bold cursor-pointer font-semibold"
           onClick={() => navigate("/Contact")}
         >
           Contact
