@@ -15,8 +15,19 @@ function Header() {
         >
           Home
         </li>
-        <li className="py-16 hover:font-bold cursor-pointer"> About</li>
-        <li className="py-16 hover:font-bold cursor-pointer">Contact</li>
+        <li
+          className="py-16 hover:font-bold cursor-pointer"
+          onClick={() => navigate("/About")}
+        >
+          {" "}
+          About
+        </li>
+        <li
+          className="py-16 hover:font-bold cursor-pointer"
+          onClick={() => navigate("/Contact")}
+        >
+          Contact
+        </li>
       </ul>
       <button className="bg-red-500 rounded-full py-2 px-3 flex items-center gap-2">
         Subcribe <IoLogoYoutube />

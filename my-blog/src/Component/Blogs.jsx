@@ -14,10 +14,7 @@ function Blogs() {
   };
   return (
     <div className=" bg-gray-50 ">
-      <div
-        className=" items-center mt-16 px-6   "
-        onClick={() => navigate("blog-detail/")}
-      >
+      <div className=" items-center mt-16 px-6   ">
         <div
           className="md:flex items-center  bg-gray-100 rounded-lg shadow-lg overflow-hidden"
           id="1"
@@ -39,7 +36,7 @@ function Blogs() {
             </h3>
             <button
               className="mb-5 mt-10  hover:scale-110 border-[1px] border-gray-500 hover:bg-red-500 transition-all duration-100 ease-in-out rounded-lg p-2 px-3 pb-2"
-              onClick={handClkck}
+              onClick={() => navigate("blog-detail/")}
             >
               View
             </button>
@@ -47,17 +44,22 @@ function Blogs() {
         </div>
         <div className="md:flex items-center mx-auto  bg-gray-100 rounded-lg shadow-lg overflow-hidden mt-8">
           <div className="text-center md:justify-center">
-            <h1 className="md:ml-48 mb-7 font-bold text-2xl">My Best Work</h1>
+            <h1 className="md:ml-48 mb-7 font-bold text-2xl">
+              My Technical Skills
+            </h1>
             <h2 className="md:ml-9">
-              In my Blog you are going to see all you want and all you love. So
-              kinding go thougth all the Blog and enjkoy your time in my Blog.
+              In my Blog you are going to see all the Technical skills that i
+              have mastered.
             </h2>
             <h2 className="cursor-pointer mt-4 justify-center gap-5 md:ml-8 items-center  flex">
               <FaFacebookF className="" />
               <BsInstagram className="mt-3 mb-3 cursor-pointer" />
               <FaMessage />
             </h2>
-            <button className="mt-4 md:ml-11 hover:scale-110 border-[1px] border-gray-500 hover:bg-red-500 transition-all duration-100 ease-in-out rounded-lg p-2 px-3 pb-2">
+            <button
+              className="mt-4 md:ml-11 hover:scale-110 border-[1px] border-gray-500 hover:bg-red-500 transition-all duration-100 ease-in-out rounded-lg p-2 px-3 pb-2"
+              onClick={() => navigate("TechnicalSkills/")}
+            >
               Views
             </button>
           </div>
@@ -75,11 +77,18 @@ function Blogs() {
             <FaMessage />
           </h2>
           <div className="text-center md:justify-center">
-            <h1 className="md:ml-36 mb-7 font-bold text-2xl">Contact Us </h1>
+            <h1 className="md:ml-36 mb-7 font-bold text-2xl">
+              My Career Goals{" "}
+            </h1>
             <h3 className=" md:ml-9">
               Bring your imagination to us we will make it a reality for you.
             </h3>
-            <button className="md:ml-44 mb-5 mt-10  hover:scale-110 border-[1px] border-gray-500 hover:bg-red-500 transition-all duration-100 ease-in-out rounded-lg p-2 px-3 pb-2">
+            <button
+              className="md:ml-44 mb-5 mt-10  hover:scale-110 border-[1px] border-gray-500 hover:bg-red-500 transition-all duration-100 ease-in-out rounded-lg p-2 px-3 pb-2
+            
+            "
+              onClick={() => navigate("CareerGoals/")}
+            >
               View
             </button>
           </div>
