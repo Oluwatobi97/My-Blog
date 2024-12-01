@@ -48,15 +48,15 @@ export const NavBar = () => {
   const navList = [
     {
       linkName: "Home",
-      to: "#",
+      to: "/",
     },
     {
       linkName: "About Us",
-      to: "#",
+      to: "/About",
     },
     {
       linkName: "Contact ",
-      to: "#",
+      to: "/Contact",
     },
   ];
   const [isToggled, setIsToggeled] = useState(false);
