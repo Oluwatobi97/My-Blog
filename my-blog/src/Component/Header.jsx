@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import photo3 from "../../../assets/image/photo3.jpeg";
+
 import { Link } from "react-router-dom";
 
 import { Menu, X } from "lucide-react";
