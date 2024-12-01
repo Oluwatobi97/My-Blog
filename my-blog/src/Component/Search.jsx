@@ -6,18 +6,14 @@ function Search() {
   const tags = [
     {
       id: 1,
-      desciption: "All",
-    },
-    {
-      id: 2,
       desciption: " Photos",
     },
     {
-      id: 3,
+      id: 2,
       desciption: " Projects",
     },
     {
-      id: 4,
+      id: 3,
       desciption: "Best Work",
     },
   ];

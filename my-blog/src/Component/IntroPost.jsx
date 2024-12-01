@@ -1,6 +1,5 @@
 import React from "react";
 import Banner from "../assets/images/Banner.jpeg";
-import { BiPhotoAlbum } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 
 function IntroPost() {

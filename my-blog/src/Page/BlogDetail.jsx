@@ -7,7 +7,7 @@ function BlogDetail() {
       <h1 className="font-bold text-xl">
         Welcome To My Journey as a Web Developer
       </h1>
-      <h2 className="mt-5 mb-5 text-gray-800">
+      <h2 className="mt-5 mb-5 text-gray-800 md:text-xl md:p-3">
         Hi, I’m Tobi Siyanbola, a passionate web developer from Lagos, Nigeria.
         With over three years of hands-on experience in web development, I’ve
         honed my skills across various projects, using technologies like HTML,
@@ -15,10 +15,10 @@ function BlogDetail() {
         about my journey so far!
       </h2>
 
-      <img src={Photo5} className=" ml-5" />
+      <img src={Photo5} className=" ml-5 md:ml-48" />
 
       <h1 className="font-bold mt-4 text-xl">I Build A Strong Fundation</h1>
-      <h2 className="mt-3  text-gray-800">
+      <h2 className="mt-3  text-gray-800 md:text-xl md:p-3">
         After earning my Bachelor’s degree in Computer Science from ESGT
         University in the Republic of Benin in October 2022, I launched my
         career in web development through freelance projects. The excitement of
