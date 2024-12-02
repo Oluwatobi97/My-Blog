@@ -1,98 +1,87 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import Logo from "./../assets/images/Logo.jpeg";
+import { IoLogoYoutube, IoMenu, IoClose } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 
-import { Link } from "react-router-dom";
-
-import { Menu, X } from "lucide-react";
-
-export const MoblieNavBar = ({
-  isToggled,
-  setIsToggeled,
-  navItem,
-  buttonCmp,
-}) => {
-  return (
-    <div
-      className={`fixed  border ${
-        isToggled
-          ? "block right-[1%] p-10 transition duration-75 ease-in-out"
-          : "left-[100%]"
-      }  transition-all duration-100 ease-in-out z-10   bg-background `}
-    >
-      <div className="flex flex-col gap-20 items-center">
-        <ul className="flex flex-col mt-10 gap-10 items-center md:gap-8 text-lg ">
-          {navItem.map((item, index) => (
-            <Link to={item.to} className="pointer">
-              <li
-                className="font-semibold capitalize"
-                onClick={() => {
-                  setIsToggeled(false);
-                }}
-                key={index}
-              >
-                {item.linkName.includes("-")
-                  ? item.linkName.replace("-", " ")
-                  : item.linkName}{" "}
-              </li>
-            </Link>
-          ))}
-        </ul>
-        <div>{buttonCmp}</div>
-      </div>
-    </div>
-  );
-};
-
-export const NavBar = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-  const navList = [
-    {
-      linkName: "Home",
-      to: "/",
-    },
-    {
-      linkName: "About Us",
-      to: "/About",
-    },
-    {
-      linkName: "Contact ",
-      to: "/Contact",
-    },
-  ];
-  const [isToggled, setIsToggeled] = useState(false);
+function Header() {
+  const [menuOpen, setMenuOpen] = useState(false); // State to toggle menu visibility
+  const menuRef = useRef(null); // Ref for the menu container
+  const navigate = useNavigate();
+  // TODO: this close botton for the the meunbar is not working
+  // Close the menu if clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setMenuOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
-    <div className=" md:p-5 m-auto bg-background">
-      <div className="max-w-7xl py-5 px-5 flex items-center justify-between">
-        {/* <img src={photo1} className='md:w-[150px] w-[90px]' /> */}
-        <h1 className="text-xl md:text-2xl font-extrabold  tracking-tighter text-textSecondary">
-          FREDRAL INVESTMENT
-        </h1>
-        <button onClick={() => setIsToggeled(!isToggled)} className="relative">
-          {!isToggled ? (
-            <Menu size={20} className="cursor-pointer ml-auto" />
-          ) : (
-            <X size={20} className="cursor-pointer ml-auto" />
-          )}
-          {/* <MoblieNavBar
-            buttonCmp={
-              <button
-                onClick={() => userContext.logOut()}
-                className={
-                  "flex items-center justify-center px-4 py-2 bg-red-400 hover:bg-blue-700 text-white font-semibold rounded-md transition duration-75 ease-in-out"
-                }
-              >
-                Log out
-              </button>
-            }
-            isToggled={isToggled}
-            navItem={navList}
-            setIsToggeled={setIsToggeled}
-          /> */}
-        </button>
+    <div className="flex justify-between items-center p-4 bg-white shadow-md">
+      {/* Logo */}
+      <img
+        src={Logo}
+        alt="Logo"
+        className="w-[80px] md:w-[150px] cursor-pointer"
+        onClick={() => navigate("/")}
+      />
+
+      {/* Hamburger Menu Icon for Mobile */}
+      <div
+        className="md:hidden text-2xl cursor-pointer"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        {menuOpen ? <IoClose /> : <IoMenu />}
       </div>
+
+      {/* Navigation Menu */}
+      <ul
+        ref={menuRef} // Attach ref to the menu
+        className={`fixed inset-0 bg-white flex flex-col items-center justify-center gap-8 text-lg font-semibold transition-transform transform ${
+          menuOpen ? "translate-x-0" : "translate-x-full"
+        } md:static md:translate-x-0 md:flex-row md:gap-8`}
+      >
+        <li
+          className="hover:text-blue-500 cursor-pointer"
+          onClick={() => {
+            navigate("/");
+            setMenuOpen(false); // Close menu on click
+          }}
+        >
+          Home
+        </li>
+        <li
+          className="hover:text-blue-500 cursor-pointer"
+          onClick={() => {
+            navigate("/About");
+            setMenuOpen(false);
+          }}
+        >
+          About
+        </li>
+        <li
+          className="hover:text-blue-500 cursor-pointer"
+          onClick={() => {
+            navigate("/Contact");
+            setMenuOpen(false);
+          }}
+        >
+          Contact
+        </li>
+      </ul>
+
+      {/* Optional Subscribe Button */}
+      <button
+        className="hidden md:flex items-center gap-2 bg-red-500 text-white py-2 px-4 rounded-full hover:bg-red-600"
+        onClick={() => window.open("https://youtube.com", "_blank")}
+      >
+        Subscribe <IoLogoYoutube />
+      </button>
     </div>
   );
-};
+}
 
-export default NavBar;
+export default Header;

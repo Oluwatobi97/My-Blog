@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 
 function Blogs() {
   const navigate = useNavigate();
-  const handClkck = () => {
+  const handClick = () => {
     navigate("/blog-detail");
   };
   return (
