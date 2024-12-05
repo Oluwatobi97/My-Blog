@@ -6,46 +6,56 @@ function Search() {
   const tags = [
     {
       id: 1,
-      desciption: " Photos",
+      description: "Photos",
     },
     {
       id: 2,
-      desciption: " Projects",
+      description: "Projects",
     },
     {
       id: 3,
-      desciption: "Best Work",
+      description: "Best Work",
     },
   ];
   const [activeIndex, setActiveIndex] = useState(0);
-  return (
-    <div className="flex justify-center flex-col bg-gray-50 items-center">
-      <img
-        src={Banner}
-        className="rounded-2xl w-[350px] md:w-[700px] h-[200px]  items-center"
-      />
-      <div className="bg-white shadow-lg w-[300px] md:w-[500px] p-3 rounded-lg mt-[-20px]  flex items-center">
-        <FaSearch />
 
-        <input
-          type="text"
-          placeholder="Search"
-          className="outline-none px-[10px] "
-        />
-      </div>
-      <div className="flex gap-2 md:gap-9  mt-3 cursor-pointer justify-center ">
-        {tags.map((item, index) => (
-          <ul
-            onClick={() => setActiveIndex(index)}
-            className={`${
-              index == activeIndex ? "bg-red-500 text-white" : null
-            }   rounded-2xl md:rounded-full md:px-2 cursor-pointer hover:scale-110 hover:border-[1px] border-red-500 transition-all duration-100 ease-in-out`}
-          >
-            <li className="text-sm font-semibold px-3 shadow-lg rounded-2xl py-1  ">
-              {item.desciption}
-            </li>
-          </ul>
-        ))}
+  return (
+    <div className="container mx-auto px-4 py-8">
+      <div className="flex flex-col items-center">
+        <div className="relative w-full max-w-3xl">
+          <img
+            src={Banner}
+            alt="Banner"
+            className="w-full h-48 object-cover rounded-2xl shadow-lg"
+          />
+          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 bg-white shadow-lg w-4/5 max-w-xl p-2 rounded-lg flex items-center">
+            <FaSearch className="text-gray-400 mr-2" />
+            <input
+              type="text"
+              placeholder="Search"
+              className="w-full outline-none px-2 py-1"
+            />
+          </div>
+        </div>
+        <div className="flex flex-wrap justify-center gap-4 mt-10">
+          {tags.map((item, index) => (
+            <button
+              key={item.id}
+              onClick={() => setActiveIndex(index)}
+              className={`
+                px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ease-in-out
+                ${
+                  index === activeIndex
+                    ? "bg-indigo-500 text-white"
+                    : "bg-white text-gray-700 hover:bg-gray-100"
+                }
+                shadow-md hover:shadow-lg
+              `}
+            >
+              {item.description}
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );

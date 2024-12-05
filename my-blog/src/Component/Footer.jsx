@@ -1,23 +1,45 @@
 import React from "react";
-
-import { FaFacebookF } from "react-icons/fa6";
-import { BsInstagram } from "react-icons/bs";
-import { FaMessage } from "react-icons/fa6";
+import { FaFacebookF, FaInstagram, FaEnvelope } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className="bg-gray-100 py-3 px-1 mt-5">
-      <div className="  text-center ">
-        <h2 className=" font-bold ml-6">Contact Us</h2>
-        <h2 className="cursor-pointer">www.alexthecodeguy.vercel.app</h2>
-        <h2>+234 903 376 6725</h2>
+    <footer className="bg-gray-100 py-3 mt-12">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-4">
+          <h2 className="text-2xl font-bold text-gray-800 mb-2">Contact Us</h2>
+          <a
+            href="https://alexthecodeguy.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-indigo-600 hover:text-indigo-800 transition-colors duration-300"
+          >
+            www.alexthecodeguy.vercel.app
+          </a>
+          <p className="text-gray-600 mt-2">+234 903 376 6725</p>
+        </div>
+        <div className="flex justify-center space-x-6">
+          <SocialIcon Icon={FaFacebookF} href="https://facebook.com" />
+          <SocialIcon Icon={FaInstagram} href="https://instagram.com" />
+          <SocialIcon Icon={FaEnvelope} href="mailto:contact@example.com" />
+        </div>
+        <div className="text-center mt-4 text-sm text-gray-500">
+          © {new Date().getFullYear()} Alex The Code Guy. All rights reserved.
+        </div>
       </div>
-      <div className="flex items-center justify-center gap-16 text-2xl cursor-pointer mt-5 ">
-        <FaFacebookF className="hover:scale-110 hover:border-[1px] transition-all duration-100 ease-in-out mb-3" />
-        <BsInstagram className="hover:scale-110 hover:border-[1px] transition-all duration-100 ease-in-out mb-3" />
-        <FaMessage className="hover:scale-110 hover:border-[1px] transition-all duration-100 ease-in-out mb-3" />
-      </div>
-    </div>
+    </footer>
+  );
+}
+
+function SocialIcon({ Icon, href }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-gray-400 hover:text-indigo-500 transition-colors duration-300"
+    >
+      <Icon className="text-2xl" />
+    </a>
   );
 }
 

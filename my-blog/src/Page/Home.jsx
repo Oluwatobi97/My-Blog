@@ -5,7 +5,7 @@ import Blogs from "../Component/Blogs";
 
 function Home() {
   return (
-    <div className="bg-gray-50 p-[7px] md:p-[20px]">
+    <div className=" p-[7px] md:p-[20px]">
       {/*Search */}
       <Search />
       {/*IntroPost*/}

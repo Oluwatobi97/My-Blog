@@ -19,7 +19,7 @@ function Header() {
   }, []);
 
   return (
-    <div className="flex justify-between items-center p-4 bg-white shadow-md relative">
+    <div className="flex justify-between items-center p-1 px-2  shadow-md relative">
       <img
         src={Logo}
         alt="Logo"

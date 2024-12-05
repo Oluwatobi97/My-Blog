@@ -9,84 +9,80 @@ import { useNavigate } from "react-router-dom";
 
 function Blogs() {
   const navigate = useNavigate();
-  const handClick = () => {
-    navigate("/blog-detail");
-  };
+
   return (
-    <div className=" bg-gray-50 ">
-      <div className=" items-center mt-16 px-6   ">
-        <div
-          className="md:flex items-center  bg-gray-100 rounded-lg shadow-lg overflow-hidden"
-          id="1"
-        >
+    <div className="container mx-auto px-4 py-8">
+      <div className="space-y-8">
+        <div className="md:flex items-center bg-blue-50 rounded-lg shadow-lg overflow-hidden">
           <img
             src={Photo4}
-            className="mt-10 w-[500px] md:h-[300px]  mb-7 rounded-lg"
+            className="w-full md:w-1/2 h-64 object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none"
+            alt="My Projects"
           />
-          <h2 className="justify-center gap-5 mb-3 flex md:flex-col md:ml-4  cursor-pointer">
-            <FaFacebookF className="" />
-            <BsInstagram className=" cursor-pointer" />
-            <FaMessage />
-          </h2>
-          <div className="text-center md:justify-center">
-            <h1 className="md:ml-36 mb-7 font-bold text-2xl">My Projects</h1>
-            <h3 className=" ml-9">
-              Thank you for visiting Blog you are going to see some wonder
-              things
-            </h3>
+          <div className="p-6 md:w-1/2">
+            <h1 className="text-2xl font-bold mb-4">My Projects</h1>
+            <p className="mb-4">
+              Thank you for visiting my Blog. You are going to see some
+              wonderful things.
+            </p>
+            <div className="flex justify-center space-x-4 mb-4">
+              <FaFacebookF className="text-gray-600 hover:text-indigo-500 cursor-pointer" />
+              <BsInstagram className="text-gray-600 hover:text-indigo-500 cursor-pointer" />
+              <FaMessage className="text-gray-600 hover:text-indigo-500 cursor-pointer" />
+            </div>
             <button
-              className="mb-5 mt-10  hover:scale-110 border-[1px] border-gray-500 hover:bg-red-500 transition-all duration-100 ease-in-out rounded-lg p-2 px-3 pb-2"
+              className="w-full md:w-auto px-6 py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition-all duration-300 ease-in-out"
               onClick={() => navigate("blog-detail/")}
             >
               View
             </button>
           </div>
         </div>
-        <div className="md:flex items-center mx-auto  bg-gray-100 rounded-lg shadow-lg overflow-hidden mt-8">
-          <div className="text-center md:justify-center">
-            <h1 className="md:ml-48 mb-7 font-bold text-2xl">
-              My Technical Skills
-            </h1>
-            <h2 className="md:ml-9">
-              In my Blog you are going to see all the Technical skills that i
+
+        <div className="md:flex items-center bg-blue-50 rounded-lg shadow-lg overflow-hidden">
+          <div className="p-6 md:w-1/2 md:order-2">
+            <h1 className="text-2xl font-bold mb-4">My Technical Skills</h1>
+            <p className="mb-4">
+              In my Blog, you are going to see all the Technical skills that I
               have mastered.
-            </h2>
-            <h2 className="cursor-pointer mt-4 justify-center gap-5 md:ml-8 items-center  flex">
-              <FaFacebookF className="" />
-              <BsInstagram className="mt-3 mb-3 cursor-pointer" />
-              <FaMessage />
-            </h2>
+            </p>
+            <div className="flex justify-center space-x-4 mb-4">
+              <FaFacebookF className="text-gray-600 hover:text-indigo-500 cursor-pointer" />
+              <BsInstagram className="text-gray-600 hover:text-indigo-500 cursor-pointer" />
+              <FaMessage className="text-gray-600 hover:text-indigo-500 cursor-pointer" />
+            </div>
             <button
-              className="mt-4 md:ml-11 hover:scale-110 border-[1px] border-gray-500 hover:bg-red-500 transition-all duration-100 ease-in-out rounded-lg p-2 px-3 pb-2"
+              className="w-full md:w-auto px-6 py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition-all duration-300 ease-in-out"
               onClick={() => navigate("TechnicalSkills/")}
             >
-              Views
+              View
             </button>
           </div>
           <img
             src={Photo2}
-            className="mt-10 mb-5 w-[500px] h-[300px] md:h-[400px] rounded-lg"
+            className="w-full md:w-1/2 h-64 object-cover rounded-b-lg md:rounded-r-lg md:rounded-b-none md:order-1"
+            alt="Technical Skills"
           />
         </div>
-        <div></div>
-        <div className="md:flex items-center mx-auto  bg-gray-100 rounded-lg shadow-lg overflow-hidden mt-8">
-          <img src={Photo5} className="mt-10 w-[500px]  mb-6 rounded-lg" />
-          <h2 className="cursor-pointer flex md:flex-col items-center justify-center gap-5">
-            <FaFacebookF className="" />
-            <BsInstagram className="mt-3 mb-3 cursor-pointer" />
-            <FaMessage />
-          </h2>
-          <div className="text-center md:justify-center">
-            <h1 className="md:ml-36 mb-7 font-bold text-2xl">
-              My Career Goals{" "}
-            </h1>
-            <h3 className=" md:ml-9">
-              Bring your imagination to us we will make it a reality for you.
-            </h3>
+
+        <div className="md:flex items-center bg-blue-50 rounded-lg shadow-lg overflow-hidden">
+          <img
+            src={Photo5}
+            className="w-full md:w-1/2 h-64 object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none"
+            alt="Career Goals"
+          />
+          <div className="p-6 md:w-1/2">
+            <h1 className="text-2xl font-bold mb-4">My Career Goals</h1>
+            <p className="mb-4">
+              Bring your imagination to us, we will make it a reality for you.
+            </p>
+            <div className="flex justify-center space-x-4 mb-4">
+              <FaFacebookF className="text-gray-600 hover:text-indigo-500 cursor-pointer" />
+              <BsInstagram className="text-gray-600 hover:text-indigo-500 cursor-pointer" />
+              <FaMessage className="text-gray-600 hover:text-indigo-500 cursor-pointer" />
+            </div>
             <button
-              className="md:ml-44 mb-5 mt-10  hover:scale-110 border-[1px] border-gray-500 hover:bg-red-500 transition-all duration-100 ease-in-out rounded-lg p-2 px-3 pb-2
-            
-            "
+              className="w-full md:w-auto px-6 py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition-all duration-300 ease-in-out"
               onClick={() => navigate("CareerGoals/")}
             >
               View

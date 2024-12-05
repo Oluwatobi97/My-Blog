@@ -2,10 +2,10 @@ import React from "react";
 
 function About() {
   return (
-    <div className="p-3 items-center justify-center text-center ">
+    <div className="p-3 items-center justify-center text-center  border bg-gray-100 pt-3 mt-5 rounded-lg">
       <h1 className="font-bold text-xl mb-4">About Us</h1>
       <p className="text-gray-800">
-        ’m Tobi Siyanbola, a Lagos-based web developer with 3 years of
+        I’m Tobi Siyanbola, a Lagos-based web developer with 3 years of
         experience specializing in building responsive, engaging web
         applications. With a solid foundation in HTML, CSS, JavaScript, React,
         Tailwind CSS, and WordPress, I focus on crafting seamless user

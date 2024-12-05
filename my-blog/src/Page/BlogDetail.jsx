@@ -3,7 +3,7 @@ import Photo5 from "../assets/images/Photo5.jpeg";
 
 function BlogDetail() {
   return (
-    <div className="p-3 items-center justify-center text-center">
+    <div className="p-3 items-center justify-center text-center border bg-gray-100 mt-7 rounded-lg">
       <h1 className="font-bold text-xl">
         Welcome To My Journey as a Web Developer
       </h1>
@@ -17,7 +17,7 @@ function BlogDetail() {
 
       <img src={Photo5} className=" ml-5 md:ml-48" />
 
-      <h1 className="font-bold mt-4 text-xl">I Build A Strong Fundation</h1>
+      <h1 className="font-bold mt-4 text-xl">I Build A Strong Function</h1>
       <h2 className="mt-3  text-gray-800 md:text-xl md:p-3">
         After earning my Bachelor’s degree in Computer Science from ESGT
         University in the Republic of Benin in October 2022, I launched my
