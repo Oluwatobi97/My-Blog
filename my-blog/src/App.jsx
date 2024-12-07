@@ -10,7 +10,7 @@ import About from "./Page/About";
 function App() {
   return (
     <>
-      <div className="p-[3px] md:p-[3px] bg-gradient-to-r from-indigo-100 from-10% via-sky-100 via-30% to-emerald-100 to-90%">
+      <div className="p-[2px] md:p-[2px] bg-gradient-to-r from-indigo-100 from-10% via-sky-100 via-30% to-emerald-100 to-90%">
         {/*Header */}
         <Header />
         <Routes>
