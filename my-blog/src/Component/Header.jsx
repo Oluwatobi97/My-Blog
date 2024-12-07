@@ -27,7 +27,7 @@ function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4 md:justify-start md:space-x-10">
+        <div className="flex justify-between items-center py-4 md:justify-between md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <img
               src={Logo}
