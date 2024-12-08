@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import Banner from "../assets/images/Banner.jpeg";
 import { FaSearch } from "react-icons/fa";
+import { useNavigate, NavLink } from "react-router-dom";
 
 function Search() {
+  const navigate = useNavigate();
   const tags = [
     {
       id: 1,
@@ -11,6 +13,7 @@ function Search() {
     {
       id: 2,
       description: "Projects",
+      path: "/FirstProject",
     },
     {
       id: 3,
@@ -41,7 +44,12 @@ function Search() {
           {tags.map((item, index) => (
             <button
               key={item.id}
-              onClick={() => setActiveIndex(index)}
+              onClick={() => {
+                setActiveIndex(index);
+                if (item.path) {
+                  navigate(item.path);
+                }
+              }}
               className={`
                 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ease-in-out
                 ${

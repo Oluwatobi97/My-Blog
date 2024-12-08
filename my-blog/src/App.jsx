@@ -7,6 +7,7 @@ import TechnicalSkills from "./Component/TechnicalSkills";
 import CareerGoals from "./Component/CareerGoals";
 import Contact from "./Page/Contact";
 import About from "./Page/About";
+import FirstProject from "./Page/AllMyProject/FirstProject";
 function App() {
   return (
     <>
@@ -20,6 +21,7 @@ function App() {
           <Route path="/CareerGoals" element={<CareerGoals />}></Route>
           <Route path="/Contact" element={<Contact />}></Route>
           <Route path="/About" element={<About />}></Route>
+          <Route path="/FirstProject" element={<FirstProject />}></Route>
         </Routes>
         {/* Footer */}
         <Footer />
