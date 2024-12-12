@@ -1,32 +1,44 @@
-import { Routes, Route } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Router, Routes, Route } from "react-router-dom";
 import Home from "./Page/Home";
-import BlogDetail from "./Page/BlogDetail";
+import About from "./Page/About";
+import Contact from "./Page/Contact";
 import Header from "./Component/Header";
 import Footer from "./Component/Footer";
+import BlogDetail from "./Page/BlogDetail";
 import TechnicalSkills from "./Component/TechnicalSkills";
 import CareerGoals from "./Component/CareerGoals";
-import Contact from "./Page/Contact";
-import About from "./Page/About";
 import FirstProject from "./Page/AllMyProject/FirstProject";
+
 function App() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [isDarkMode]);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
   return (
-    <>
-      <div className="p-[0] md:p-[0] bg-gradient-to-r from-indigo-100 from-10% via-sky-100 via-30% to-emerald-100 to-90%">
-        {/*Header */}
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/blog-detail" element={<BlogDetail />}></Route>
-          <Route path="/TechnicalSkills" element={<TechnicalSkills />}></Route>
-          <Route path="/CareerGoals" element={<CareerGoals />}></Route>
-          <Route path="/Contact" element={<Contact />}></Route>
-          <Route path="/About" element={<About />}></Route>
-          <Route path="/FirstProject" element={<FirstProject />}></Route>
-        </Routes>
-        {/* Footer */}
-        <Footer />
-      </div>
-    </>
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
+      <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Contact" element={<Contact />} />
+        <Route path="/blog-detail" element={<BlogDetail />} />
+        <Route path="/TechnicalSkills" element={<TechnicalSkills />} />
+        <Route path="/CareerGoals" element={<CareerGoals />} />
+        <Route path="/FirstProject" element={<FirstProject />} />
+      </Routes>
+      <Footer />
+    </div>
   );
 }
 
