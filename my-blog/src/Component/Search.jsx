@@ -31,12 +31,12 @@ function Search() {
             alt="Banner"
             className="w-full h-48 object-cover rounded-2xl shadow-lg"
           />
-          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 bg-white shadow-lg w-4/5 max-w-xl p-2 rounded-lg flex items-center">
+          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 bg-white dark:bg-gray-800 shadow-lg w-4/5 max-w-xl p-2 rounded-lg flex items-center">
             <FaSearch className="text-gray-400 mr-2" />
             <input
               type="text"
               placeholder="Search"
-              className="w-full outline-none px-2 py-1"
+              className="w-full outline-none dark:bg-gray-800 dark:text-gray-100 px-2 py-1"
             />
           </div>
         </div>
@@ -54,8 +54,8 @@ function Search() {
                 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ease-in-out
                 ${
                   index === activeIndex
-                    ? "bg-indigo-500 text-white"
-                    : "bg-white text-gray-700 hover:bg-gray-100"
+                    ? "bg-indigo-500 text-gray-500 dark:text-black"
+                    : "bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-100 hover:bg-gray-100"
                 }
                 shadow-md hover:shadow-lg
               `}
