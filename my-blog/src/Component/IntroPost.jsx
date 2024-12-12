@@ -8,7 +8,7 @@ function IntroPost() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div
-        className="bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-105"
+        className="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-105"
         onClick={() => navigate("blog-detail/")}
       >
         <div className="md:flex">
@@ -20,10 +20,10 @@ function IntroPost() {
             />
           </div>
           <div className="md:w-1/2 p-6 flex flex-col justify-center">
-            <h1 className="text-3xl font-bold mb-4 text-gray-800">
+            <h1 className="text-3xl font-bold mb-4 text-gray-800 dark:text-gray-100">
               Welcome To My Tech Blog
             </h1>
-            <h3 className="text-xl text-gray-600">
+            <h3 className="text-xl text-gray-600 dark:text-gray-100">
               Discover tips, trends, and stories that matter.
             </h3>
             <button

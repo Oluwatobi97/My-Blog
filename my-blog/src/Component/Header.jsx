@@ -32,7 +32,7 @@ function Header({ toggleDarkMode, isDarkMode }) {
           <img
             src={Logo}
             alt="Logo"
-            className="w-16 h-16 md:w-20 md:h-20 object-cover cursor-pointer rounded-full shadow-md"
+            className="w-16 h-16 md:w-20 md:h-20 object-cover cursor-pointer rounded-full shadow-lg"
             onClick={() => navigate("/")}
           />
 

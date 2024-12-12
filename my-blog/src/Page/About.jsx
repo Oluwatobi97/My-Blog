@@ -3,12 +3,12 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 function About() {
   return (
-    <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-10">
-      <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">
+    <div className="max-w-4xl mx-auto p-6 bg-white dark:bg-gray-800  shadow-lg rounded-lg mt-10">
+      <h1 className="text-3xl font-bold text-center text-gray-800 dark:text-blue-600 mb-8">
         About Me
       </h1>
 
-      <div className="space-y-6 text-gray-700">
+      <div className="space-y-6 text-gray-700 dark:text-gray-100">
         <p>
           I'm Tobi Siyanbola, a Lagos-based web developer with 3 years of
           experience specializing in building responsive, engaging web
@@ -32,10 +32,10 @@ function About() {
         </p>
       </div>
 
-      <h2 className="text-2xl font-semibold text-gray-800 mt-10 mb-4">
+      <h2 className="text-2xl font-semibold text-gray-800 dark:text-blue-600 mt-10 mb-4">
         What Sets Me Apart
       </h2>
-      <ul className="list-disc list-inside space-y-2 text-gray-700">
+      <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-100">
         <li>
           Strong foundation in modern web technologies (HTML, CSS, JavaScript,
           React, Tailwind CSS)
@@ -49,7 +49,7 @@ function About() {
       </ul>
 
       <div className="mt-10 text-center">
-        <h3 className="text-xl font-semibold text-gray-800 mb-4">
+        <h3 className="text-xl font-semibold text-gray-800 dark:text-blue-600 mb-4">
           Let's Connect
         </h3>
         <div className="flex justify-center space-x-4">

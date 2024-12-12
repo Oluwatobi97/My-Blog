@@ -4,14 +4,14 @@ import { useNavigate } from "react-router-dom";
 function TechnicalSkills() {
   const navigate = useNavigate();
   return (
-    <div className="p-3 items-center justify-center text-center">
-      <h1 className="font-bold text-xl">
+    <div className="max-w-3xl mx-auto p-6 bg-white dark:bg-gray-800  shadow-lg rounded-lg mt-10">
+      <h1 className="font-bold text-xl dark:text-blue-600">
         This are all the Technical Skills that i have mastered
       </h1>
-      <p className="text-gray-900 font-semibold mt-2">
+      <p className="text-gray-900 dark:text-gray-100 font-semibold mt-2">
         Over the years, I’ve gained experience in:
       </p>
-      <h2 className="text-gray-800 text-left">
+      <h2 className="text-gray-800 text-left dark:text-gray-100">
         <br /> • HTML & CSS: Building responsive, visually appealing designs
         from the ground up.
         <br /> • JavaScript: With 2 years under my belt, JavaScript is a core
