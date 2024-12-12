@@ -65,7 +65,7 @@ function About() {
             href="https://github.com/yourusername"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-800 hover:text-gray-600"
+            className="text-blue-600 hover:text-gray-600"
           >
             <FaGithub className="text-3xl" />
           </a>
