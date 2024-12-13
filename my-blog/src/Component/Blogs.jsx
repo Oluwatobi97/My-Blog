@@ -46,12 +46,6 @@ function Blogs() {
 
   return (
     <div className={`container mx-auto px-4 py-8 ${darkMode ? "dark" : ""}`}>
-      {/* <button
-        onClick={toggleDarkMode}
-        className="mb-4 px-4 py-2 bg-gray-800 text-white rounded-lg"
-      >
-        Toggle Dark Mode
-      </button> */}
       <div className="space-y-8">
         <div className="md:flex items-center bg-blue-50 dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden animate-fade-in">
           <img
@@ -83,7 +77,6 @@ function Blogs() {
             </button>
           </div>
         </div>
-
         <div className="md:flex items-center bg-blue-50 dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden animate-fade-in">
           <div className="p-6 md:w-1/2 md:order-2">
             <h1 className="text-2xl font-bold mb-4 dark:text-white">
@@ -114,7 +107,6 @@ function Blogs() {
             alt="Technical Skills"
           />
         </div>
-
         <div className="md:flex items-center bg-blue-50 dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden animate-fade-in">
           <img
             src={Photo5}
