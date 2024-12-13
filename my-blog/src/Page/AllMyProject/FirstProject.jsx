@@ -148,6 +148,12 @@ function FirstProject() {
           </div>
         ))}
       </div>
+      <p className="mt-8 text-center text-gray-600 dark:text-gray-100">
+        This is the Link to the Website if you want to inspect it <br />
+        <a className="mt-7 text-center text-blue-600">
+          https://investment-app-oe2x.onrender.com
+        </a>
+      </p>
 
       <p className="mt-8 text-center text-gray-600 dark:text-gray-100 italic">
         This project showcases my ability to create a complex, full-stack
