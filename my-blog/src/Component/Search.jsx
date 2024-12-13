@@ -8,7 +8,7 @@ function Search() {
   const tags = [
     {
       id: 1,
-      description: "Photos",
+      description: "All",
     },
     {
       id: 2,
@@ -54,7 +54,7 @@ function Search() {
                 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ease-in-out
                 ${
                   index === activeIndex
-                    ? "bg-indigo-500 text-gray-500 dark:text-black"
+                    ? "bg-indigo-500 text-gray-100 dark:text-black"
                     : "bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-100 hover:bg-gray-100"
                 }
                 shadow-md hover:shadow-lg

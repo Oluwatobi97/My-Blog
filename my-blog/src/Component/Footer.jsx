@@ -1,5 +1,11 @@
 import React from "react";
-import { FaFacebookF, FaInstagram, FaEnvelope } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaEnvelope,
+  FaWhatsapp,
+} from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa6";
 
 function Footer() {
   return (
@@ -15,16 +21,22 @@ function Footer() {
             rel="noopener noreferrer"
             className="text-indigo-600 hover:text-indigo-800 transition-colors duration-300"
           >
-            www.alexthecodeguy.vercel.app
+            victortobi2000@gmail.com
           </a>
           <p className="text-gray-600 dark:text-gray-100 mt-2">
             +234 903 376 6725
           </p>
         </div>
         <div className="flex justify-center space-x-6">
-          <SocialIcon Icon={FaFacebookF} href="https://facebook.com" />
-          <SocialIcon Icon={FaInstagram} href="https://instagram.com" />
-          <SocialIcon Icon={FaEnvelope} href="mailto:contact@example.com" />
+          <SocialIcon
+            Icon={FaTiktok}
+            href=" https://www.tiktok.com/@johnnie_26?_t=8sAxeHsL4OE&_r=1  "
+          />
+          <SocialIcon
+            Icon={FaInstagram}
+            href="https://www.instagram.com/alexcode.664284/profilecard/?igsh=ZjY4OWt3czh5OW9j "
+          />
+          <SocialIcon Icon={FaWhatsapp} href=" https://whatsapp.com/biz/ " />
         </div>
         <div className="text-center mt-4 text-sm text-gray-500 dark:text-gray-100 ">
           © {new Date().getFullYear()} Alex The Code Guy. All rights reserved.

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Photo4 from "../assets/images/Photo4.jpeg";
 import Photo2 from "../assets/images/Photo2.jpeg";
 import Photo5 from "../assets/images/Photo5.jpeg";
-import { FaFacebookF } from "react-icons/fa6";
+import { FaFacebookF, FaTicket, FaTiktok, FaWhatsapp } from "react-icons/fa6";
 import { BsInstagram } from "react-icons/bs";
 import { FaMessage } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
@@ -62,9 +62,9 @@ function Blogs() {
               wonderful things.
             </p>
             <div className="flex justify-center space-x-4 mb-4">
-              <FaFacebookF className="text-gray-600 dark:text-gray-400 hover:text-indigo-500 cursor-pointer" />
+              <FaTiktok className="text-gray-600 dark:text-gray-400 hover:text-indigo-500 cursor-pointer" />
               <BsInstagram className="text-gray-600 dark:text-gray-400 hover:text-indigo-500 cursor-pointer" />
-              <FaMessage className="text-gray-600 dark:text-gray-400 hover:text-indigo-500 cursor-pointer" />
+              <FaWhatsapp className="text-gray-600 dark:text-gray-400 hover:text-indigo-500 cursor-pointer" />
             </div>
             <button
               className={`w-full md:w-auto px-6 py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition-all duration-300 ease-in-out ${
@@ -87,9 +87,9 @@ function Blogs() {
               have mastered.
             </p>
             <div className="flex justify-center space-x-4 mb-4">
-              <FaFacebookF className="text-gray-600 dark:text-gray-400 hover:text-indigo-500 cursor-pointer" />
+              <FaTiktok className="text-gray-600 dark:text-gray-400 hover:text-indigo-500 cursor-pointer" />
               <BsInstagram className="text-gray-600 dark:text-gray-400 hover:text-indigo-500 cursor-pointer" />
-              <FaMessage className="text-gray-600 dark:text-gray-400 hover:text-indigo-500 cursor-pointer" />
+              <FaWhatsapp className="text-gray-600 dark:text-gray-400 hover:text-indigo-500 cursor-pointer" />
             </div>
             <button
               className={`w-full md:w-auto px-6 py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition-all duration-300 ease-in-out ${
@@ -121,9 +121,9 @@ function Blogs() {
               Bring your imagination to us, we will make it a reality for you.
             </p>
             <div className="flex justify-center space-x-4 mb-4">
-              <FaFacebookF className="text-gray-600 dark:text-gray-400 hover:text-indigo-500 cursor-pointer" />
+              <FaTiktok className="text-gray-600 dark:text-gray-400 hover:text-indigo-500 cursor-pointer" />
               <BsInstagram className="text-gray-600 dark:text-gray-400 hover:text-indigo-500 cursor-pointer" />
-              <FaMessage className="text-gray-600 dark:text-gray-400 hover:text-indigo-500 cursor-pointer" />
+              <FaWhatsapp className="text-gray-600 dark:text-gray-400 hover:text-indigo-500 cursor-pointer" />
             </div>
             <button
               className={`w-full md:w-auto px-6 py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition-all duration-300 ease-in-out ${

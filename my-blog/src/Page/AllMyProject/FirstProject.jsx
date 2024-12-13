@@ -102,7 +102,7 @@ function FirstProject() {
 
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white dark:bg-gray-800  shadow-lg rounded-lg mt-10">
-      <h1 className="text-3xl font-bold text-center text-gray-800 dark:text-gray-100 mb-8">
+      <h1 className="text-3xl font-bold text-center text-gray-800 dark:text-blue-600 mb-8">
         My First FullStack Website: Federal Investment
       </h1>
 
@@ -117,7 +117,7 @@ function FirstProject() {
       </h2>
       <div className="space-y-4 mb-8">
         {features.map((feature, index) => (
-          <div key={index} className="bg-gray-50 p-4 rounded-lg">
+          <div key={index} className="bg-gray-50 p-4  rounded-lg">
             <h3 className="text-xl font-semibold text-gray-800 mb-2">
               {index + 1}. {feature.title}
             </h3>
