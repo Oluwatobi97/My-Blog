@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./SliderAnimation.css"; // Custom CSS file for animations
+import { Import } from "lucide-react";
 
 function IntroPost() {
   const navigate = useNavigate();
@@ -34,7 +35,7 @@ function IntroPost() {
             <Slider {...settings}>
               <div className="slide">
                 <img
-                  src={Banner}
+                  src={Photo11}
                   alt="Tech Blog Banner 1"
                   className="w-full h-64 object-cover slide-image"
                 />

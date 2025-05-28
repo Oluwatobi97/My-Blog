@@ -9,9 +9,17 @@ import BlogDetail from "./Page/BlogDetail";
 import TechnicalSkills from "./Component/TechnicalSkills";
 import CareerGoals from "./Component/CareerGoals";
 import FirstProject from "./Page/AllMyProject/FirstProject";
+import Projects from "./Page/Projects";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    // Check user's preferred color scheme
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      setIsDarkMode(true);
+    }
+  }, []);
 
   useEffect(() => {
     if (isDarkMode) {
@@ -26,18 +34,25 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
-      <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Contact" element={<Contact />} />
-        <Route path="/blog-detail" element={<BlogDetail />} />
-        <Route path="/TechnicalSkills" element={<TechnicalSkills />} />
-        <Route path="/CareerGoals" element={<CareerGoals />} />
-        <Route path="/FirstProject" element={<FirstProject />} />
-      </Routes>
-      <Footer />
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+      <div className="flex flex-col min-h-screen">
+        <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
+        <main className="flex-grow">
+          <div className="container py-8">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/About" element={<About />} />
+              <Route path="/Contact" element={<Contact />} />
+              <Route path="/Projects" element={<Projects />} />
+              <Route path="/blog-detail" element={<BlogDetail />} />
+              <Route path="/TechnicalSkills" element={<TechnicalSkills />} />
+              <Route path="/CareerGoals" element={<CareerGoals />} />
+              <Route path="/FirstProject" element={<FirstProject />} />
+            </Routes>
+          </div>
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 }
