@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaMoon, FaSun } from "react-icons/fa";
 import Logo from "./Logo";
 
 function Header({ darkMode, toggleDarkMode }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const navItems = [
     { name: "Home", path: "/" },
@@ -44,7 +45,10 @@ function Header({ darkMode, toggleDarkMode }) {
                 <FaMoon className="w-5 h-5" />
               )}
             </button>
-            <button className="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+            >
               <svg
                 className="w-6 h-6"
                 fill="none"
@@ -55,11 +59,35 @@ function Header({ darkMode, toggleDarkMode }) {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
+                  d={
+                    isMenuOpen
+                      ? "M6 18L18 6M6 6l12 12"
+                      : "M4 6h16M4 12h16M4 18h16"
+                  }
                 />
               </svg>
             </button>
           </div>
+        </div>
+
+        {/* Mobile Menu */}
+        <div className={`md:hidden ${isMenuOpen ? "block" : "hidden"} py-4`}>
+          <nav className="flex flex-col space-y-4">
+            {navItems.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                onClick={() => setIsMenuOpen(false)}
+                className={`text-sm font-medium transition-colors ${
+                  location.pathname === item.path
+                    ? "text-blue-600 dark:text-blue-400"
+                    : "text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
         </div>
       </div>
     </header>
